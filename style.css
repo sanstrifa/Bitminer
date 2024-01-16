@@ -1,0 +1,91 @@
+h1 {
+    font-size: 40px;
+    color: green;
+    display: flex;
+    justify-content: center;
+}
+h2{
+    color: green;
+}
+h4 {
+    color: green;
+}
+h5 {
+    color: green;
+}
+body {
+    background-image: url(/684034.jpg);
+}
+.container-fluid{
+    margin-top: 100px;
+    border: 2px solid black;
+    background-color: rgb(0, 0, 0);
+    height: 600px;
+}
+.container-sm {
+    margin-top: 20px;
+    border: 2px solid green;
+    height: 500px;
+}
+.container-spec{
+    display: flex;
+    margin-top: 20px;
+
+}
+.upgrade {
+    opacity: 100%;
+    background-color: black;
+    border: 1px solid black;
+    color: green;
+    width: 100px;
+    height: 30px;
+}
+.upgrade:hover{
+    color: cornflowerblue;
+    transition: ease-in-out 100ms;
+}
+#start {
+    display: flex;
+    align-items: start;
+    background-color: #04aa6d;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+   
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 50%;
+    width: 10px;
+}
+#stop {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 50%;
+    width: 10px;
+}
+#buyBtn {
+    color: green;
+    background-color: black;
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+}
+#start:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    size: 50px;
+}
+#stop:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    size: 50px;
+}
+.bitpower{
+    color: green;
+}
