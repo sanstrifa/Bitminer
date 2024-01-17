@@ -10,17 +10,20 @@ class Computer {
         stopWorker();
         this.bitPower = bitPower;
         this.bits = bits;
-        mineBits();
         
       }
     upgradeCPU(){
-        this.cpu += 2;
+       this.cpu += 2;
+       this.bitPower = this.cpu * this.gpu * this.ram;
+        
     }
     upgradeGPU(){
         this.gpu += 1000;
+        this.bitPower = this.cpu * this.gpu * this.ram;
     }
     upgradeRAM(){
         this.ram += 8;
+        this.bitPower = this.cpu * this.gpu * this.ram;
     }
 }
 if (typeof window.Computer === 'undefined') {

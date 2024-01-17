@@ -43,7 +43,23 @@ body {
     margin-top: 20px;
 
 }
-.upgrade {
+.upgradeCPU {
+    opacity: 100%;
+    background-color: black;
+    border: 1px solid black;
+    color: green;
+    width: 100px;
+    height: 30px;
+}
+.upgradeGPU {
+    opacity: 100%;
+    background-color: black;
+    border: 1px solid black;
+    color: green;
+    width: 100px;
+    height: 30px;
+}
+.upgradeRAM{
     opacity: 100%;
     background-color: black;
     border: 1px solid black;

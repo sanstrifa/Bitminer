@@ -2,10 +2,10 @@
 let systemPower = false;
 let money = 0;
 const bitCount = document.getElementById("bit");
-const cpuit = document.querySelector(".cpu");
-const gpuit = document.querySelector(".gpu");
-const ramem = document.querySelector(".ram");
-const btn = document.querySelector(".upgrade");
+const cpuUPG = document.querySelector(".upgradeCPU");
+const gpuUPG = document.querySelector(".upgradeGPU");
+const ramUPG = document.querySelector(".upgradeRAM");
+// const btn = document.querySelector(".upgrade");
 
 
 const computer = new Computer(2, 1000, 8)
@@ -26,23 +26,53 @@ const computer = new Computer(2, 1000, 8)
     
 //   }
 // }  // create purchase function that checks balance and buys a new computer and adds it to the dom
-btn.addEventListener("click", () => { // upgrade menu give option to chose from cpu gpu and ram upgrades.
+cpuUPG.addEventListener("click", () => { 
     
-    upgradeCpu()
-})
-
-function upgradeCpu(){
-  console.log('working')
-  computer.upgradeCPU();
+    computer.upgradeCPU();
+    const newBitPower = computer.bitPower;
+    const newBits = computer.bits;
+  
+    computer.updateVariables(newBitPower, newBits);
+    mineBits();
+  
+});
+gpuUPG.addEventListener("click", () => { 
+    
   computer.upgradeGPU();
-  computer.upgradeRAM();
-
   const newBitPower = computer.bitPower;
   const newBits = computer.bits;
 
   computer.updateVariables(newBitPower, newBits);
   mineBits();
-}
+
+})
+
+ramUPG.addEventListener("click", () => { 
+    
+  computer.upgradeRAM();
+  const newBitPower = computer.bitPower;
+  const newBits = computer.bits;
+
+  computer.updateVariables(newBitPower, newBits);
+  mineBits();
+
+})
+
+
+// function upgradeCpu(){
+  
+//   computer.upgradeCPU();
+//   computer.upgradeGPU();
+//   computer.upgradeRAM();
+//   console.log(computer.cpu, computer.gpu, computer.ram)
+
+//   const newBitPower = computer.bitPower;
+//   const newBits = computer.bits;
+
+//   computer.updateVariables(newBitPower, newBits);
+//   mineBits();
+
+// }
 
 function bitCalc(bitPower, bits){
   return bitPower * bits;
@@ -56,8 +86,9 @@ function mineBits() {
         powerCount = computer.bitPower;
         updateResultDisplay(bitCnt);
         showBitPower(powerCount);
+        console.log(computer.cpu, computer.gpu, computer.ram);
         
-    }, 50);
+    }, 1000);
     systemPower = intervalID;
   }
 }
