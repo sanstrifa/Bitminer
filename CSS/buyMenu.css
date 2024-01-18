@@ -19,7 +19,7 @@ body {
   left: 20%;
   width: 500px;
   height: 600px;
-  transform: translate(-50%, -50%);
+  transform: translate(-33%, -50%);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 #openMarket {
@@ -28,6 +28,13 @@ body {
     color: green;
     width: 100px;
     height: 30px;
+}
+#trade {
+  background-color: black;
+  border: 1px solid black;
+  color: green;
+  width: 100px;
+  height: 30px;
 }
 #closeBuyMenuBtn{
     display: flex;

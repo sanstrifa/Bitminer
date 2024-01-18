@@ -1,100 +1,80 @@
 
 let systemPower = false;
-let money = 0;
+let money = 500;
+let bitValue = 1000
 const bitCount = document.getElementById("bit");
+const trade = document.getElementById("trade");
 const cpuUPG = document.querySelector(".upgradeCPU");
 const gpuUPG = document.querySelector(".upgradeGPU");
 const ramUPG = document.querySelector(".upgradeRAM");
-// const btn = document.querySelector(".upgrade");
-
 
 const computer = new Computer(2, 1000, 8)
 
-// class Computer {
-//   constructor(cpu, gpu, ram){
-//     this.cpu = cpu;
-//     this.gpu = gpu;
-//     this.ram = ram;
-//     this.bitPower = cpu * gpu * ram;
-//     this.bits = 0.01;
-//   }
-//   updateVariables(bitPower, bits){
-//     stopWorker();
-//     this.bitPower = bitPower;
-//     this.bits = bits;
-//     mineBits();
-    
-//   }
-// }  // create purchase function that checks balance and buys a new computer and adds it to the dom
 cpuUPG.addEventListener("click", () => { 
-    
+let cost = 200;
+// create upgrade
+if (cost <= money){
     computer.upgradeCPU();
     const newBitPower = computer.bitPower;
     const newBits = computer.bits;
-  
     computer.updateVariables(newBitPower, newBits);
     mineBits();
-  
+    money -=cost;
+    cost += 1000;
+    console.log(cost)
+    console.log(money)
+}
+else{
+  alert("Not enough money!")
+}
+ 
 });
 gpuUPG.addEventListener("click", () => { 
     
   computer.upgradeGPU();
+  
   const newBitPower = computer.bitPower;
   const newBits = computer.bits;
-
   computer.updateVariables(newBitPower, newBits);
   mineBits();
-
 })
-
 ramUPG.addEventListener("click", () => { 
-    
   computer.upgradeRAM();
   const newBitPower = computer.bitPower;
   const newBits = computer.bits;
-
   computer.updateVariables(newBitPower, newBits);
   mineBits();
-
 })
 
-
-// function upgradeCpu(){
-  
-//   computer.upgradeCPU();
-//   computer.upgradeGPU();
-//   computer.upgradeRAM();
-//   console.log(computer.cpu, computer.gpu, computer.ram)
-
-//   const newBitPower = computer.bitPower;
-//   const newBits = computer.bits;
-
-//   computer.updateVariables(newBitPower, newBits);
-//   mineBits();
-
-// }
+// listener to exchange bits for money
+trade.addEventListener('click', () => {
+const convertedMoney = Math.floor(bitCnt / bitValue);// calc for bit exchange
+bitCnt -= convertedMoney * bitValue;
+money += convertedMoney;
+updateResultDisplay(bitCnt);
+showMoney(money);
+})
 
 function bitCalc(bitPower, bits){
   return bitPower * bits;
 }
+
 function mineBits() {
-  // check if an interval has already been set up
   if (!systemPower) {
     const result = bitCalc(computer.bitPower, computer.bits);
     const intervalID = setInterval(() => {
-        bitCnt += Math.floor(result / 100);
+        bitCnt += Math.floor(result / 10); // the math here is going into updateResultDisplay as the value for bitCnt
         powerCount = computer.bitPower;
         updateResultDisplay(bitCnt);
         showBitPower(powerCount);
+        showMoney(money);
         console.log(computer.cpu, computer.gpu, computer.ram);
         
-    }, 1000);
+    }, 50);
     systemPower = intervalID;
   }
 }
-    // var bitPower =  computer.cpu * computer.gpu * computer.ram;     //componentSpeeds.cpu * componentSpeeds.gpu * componentSpeeds.ram;
-    // var bits = 0.01;
-    //    var bitAmount = bitPower * bits;
+
 function stopWorker() {
   if ( systemPower !== false){
     clearInterval(systemPower);
@@ -103,7 +83,7 @@ function stopWorker() {
 }
 let bitCnt = 0;
 let powerCount = 0;
-
+                            //the value being passed here is bitCnt
 function updateResultDisplay(value) {
   const resultDisplay = document.getElementById('bit');
   resultDisplay.textContent = `Bits: ${value}`;
@@ -112,6 +92,12 @@ function showBitPower(v){
   const powerDisplay = document.getElementById('bitpower');
   powerDisplay.textContent = `Power: ${v}`
 }
+function showMoney(m){
+  const moneyDisplay = document.getElementById('money');
+  moneyDisplay.textContent = `$: ${m}`
+}
+
+
 
 document.getElementById("start").addEventListener("click", mineBits)
 document.getElementById("stop").addEventListener("click", stopWorker);
