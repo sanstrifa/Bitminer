@@ -22,20 +22,22 @@ body {
   transform: translate(-33%, -50%);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-#openMarket {
+/* #openMarket {
     background-color: black;
     border: 1px solid black;
     color: green;
     width: 100px;
     height: 30px;
-}
-#trade {
+    font-size: 30px;
+} */
+/* #trade {
   background-color: black;
   border: 1px solid black;
   color: green;
   width: 100px;
   height: 30px;
-}
+  font-size: 20px;
+} */
 #closeBuyMenuBtn{
     display: flex;
     transform: translate(400%, 1500%);

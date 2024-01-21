@@ -17,17 +17,20 @@
       <!-- <div class="container-fluid"> -->
     <div class="container-sm">
             <div class="container text-center">
+                <button id="trade" class="btn btn-outline-success">Trade Bits for Money</button>
+                <button id="openMarket" class="btn btn-outline-success">Upgrade</button>
+            
                 <div id="source"  class="row">
+                  
 
-                    <h4 id="money" class="row align-items-end">$: 500</h4>
+                    <h4 id="money" class="row align-items-end">$:0</h4>
                      <h4 id="bit" class="row align-items-end">Bits: 0</h4> 
 
                      <button type="button" id="start" ></button>
                      <button type="button" id="stop" ></button>
-                     <button id="openMarket">Market</button>
-                     <button id="trade">Trade bits for Money</button>
+                   
                      <div id="buyMenu" class="buy-menu">
-                        <h2>MARKET</h2>
+                        <h2>UPGRADES</h2>
                         
                     <!-- <h4 id="money" class="row align-items-end">$: 500</h4> -->
                          <button type="button" id="buyBtn"></button>
@@ -36,20 +39,17 @@
                             <!-- add hover option to display computer stats and possibly show total speed outside -->
                             <!-- use object string literally to neatly place information -->
 
-                        <button  class="upgradeCPU">Upgrade CPU:</button> 
-                        <button  class="upgradeGPU">Upgrade GPU:</button>
-                        <button  class="upgradeRAM">Upgrade RAM:</button>
-
-
-                        
-                  
-                  
-                                
+                        <button id="upGRCPU" class="upgradeCPU">Upgrade CPU:</button> 
+                        <button id="upGRgPU" class="upgradeGPU">Upgrade GPU:</button>
+                        <button id="upGRram" class="upgradeRAM">Upgrade RAM:</button>
+                        <button  class="pServ">Purchase Computer</button>
+       
                 </div>
                          <button id="closeBuyMenuBtn">Close</button>
                      </div>
  
                     <h2 id="bitpower" class="bitpower">Power: 0</h2>
+                
                      
                                       
             </div>       

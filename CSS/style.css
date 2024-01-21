@@ -116,3 +116,10 @@ body {
 .bitpower{
     color: green;
 }
+.pServ{
+    color: green;
+    background-color: black;
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+}

@@ -1,12 +1,14 @@
-// script.js
+
 document.addEventListener('DOMContentLoaded', function () {
     const openBuyMenuBtn = document.getElementById('openMarket');
     const closeBuyMenuBtn = document.getElementById('closeBuyMenuBtn');
     const buyMenu = document.getElementById('buyMenu');
     const buyBtn = document.getElementById('buyBtn');
+    const uCPU = document.getElementById('upGRDCPU');
+    const uGPU = document.getElementById('upGRDGPU');
+    const mem = document.getElementById('upGRDRAM');
 
 
-  
     openBuyMenuBtn.addEventListener('click', function () {
       buyMenu.style.display = 'block';
     });
