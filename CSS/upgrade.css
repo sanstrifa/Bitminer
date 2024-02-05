@@ -1,0 +1,49 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+body {
+    
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  /* #buyMenu{
+    padding: 10px;
+    display: none;
+    background-color: #000000;
+    border: 2px solid green;
+    position: absolute;
+    z-index: 9;
+    width: 500px;
+    height: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  } */
+  .market-menu{
+
+    padding: 10px;
+    display: none;
+    background-color: #000000;
+    border: 2px solid green;
+    position: absolute;
+    z-index: 9;
+    /* top: 50%;
+    left: 20%; */
+    width: 500px;
+    height: 600px;
+    transform: translate(-33%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  #closeUPGmenu{
+      display: flex;
+      transform: translate(300%, 1000%);
+      /* background-color: black;
+      border: 1px solid black;
+      color: green; */
+     
+  }

@@ -6,60 +6,67 @@
     <link rel="stylesheet" href="/CSS/bootstrap.css">
     <link rel="stylesheet" href="/CSS/style.css">
     <link rel="stylesheet" href="/CSS/buyMenu.css">
+    <link rel="stylesheet" href="/CSS/upgrade.css">
     <title>Bitminer</title>
 </head>
 <body>
-    
-<!-- <div class="game-window"> -->
-    <!-- <div class="container-xl"> -->
-
-
-      <!-- <div class="container-fluid"> -->
     <div class="container-sm">
+    
             <div class="container text-center">
+                <h2 id="bitpower" class="row align-items-start">BitPower: 0</h2>
+                <h4 id="money" class="row align-items-start">$: 0</h4>
+                <h4 id="bit" class="row align-items-start">Bits: 0</h4> 
+                
                 <button id="trade" class="btn btn-outline-success">Trade Bits for Money</button>
-                <button id="openMarket" class="btn btn-outline-success">Upgrade</button>
-            
-                <div id="source"  class="row">
-                  
+                <button id="market" class="btn btn-outline-success">Market</button>
 
-                    <h4 id="money" class="row align-items-end">$:0</h4>
-                     <h4 id="bit" class="row align-items-end">Bits: 0</h4> 
-
-                     <button type="button" id="start" ></button>
-                     <button type="button" id="stop" ></button>
-                   
+                <div id="source"  class="col">
+             
                      <div id="buyMenu" class="buy-menu">
                         <h2>UPGRADES</h2>
-                        
-                    <!-- <h4 id="money" class="row align-items-end">$: 500</h4> -->
-                         <button type="button" id="buyBtn"></button>
                          
                          <div class="container-spec">
-                            <!-- add hover option to display computer stats and possibly show total speed outside -->
-                            <!-- use object string literally to neatly place information -->
-
                         <button id="upGRCPU" class="upgradeCPU">Upgrade CPU:</button> 
                         <button id="upGRgPU" class="upgradeGPU">Upgrade GPU:</button>
-                        <button id="upGRram" class="upgradeRAM">Upgrade RAM:</button>
-                        <button  class="pServ">Purchase Computer</button>
-       
+                        <button id="upGRram" class="upgradeRAM">Upgrade RAM:</button>                       
                 </div>
-                         <button id="closeBuyMenuBtn">Close</button>
+                         <button id="closeBuyMenuBtn" class="btn btn-outline-success">Close</button>
                      </div>
- 
-                    <h2 id="bitpower" class="bitpower">Power: 0</h2>
-                
-                     
-                                      
-            </div>       
-        </div>
-    </div>
+                     <div id="cpuMenu" class="cpu-menu">
 
-    <!-- </div>    -->
-<!-- </div> -->
-<script src="/Scripts/Computer.js"></script>
+                        <button id="closeUpgradeMenuBtn" class="btn btn-outline-success">Close</button>
+                     </div>
+                     <div id="gpuMenu" class="gpu-menu">
+
+                     </div>
+                     <div id="ramMenu" class="ram-menu">
+
+                     </div>
+                     <div id="openMarket" class="market-menu">
+                         <div class="container-spec">                
+                            <h1>MARKET</h1> 
+                            
+                            <div class="container-md">
+                                <button id="purchaseComputer" class="btn btn-outline-success">Purchase Computer: $10000</button>   
+                            </div>
+                                                          
+                </div>
+                         <button id="closeMarketMenu" class="btn btn-outline-success">Close</button>
+                     </div>
+                     <button type="button" id="start" class="btn btn-outline-success">Start Miner</button>
+                     <button type="button" id="stop" class="btn btn-outline-success">Stop Miner</button>
+
+                        <div id="computerContainer" class="row align-items-end">
+                       
+                   
+            
+</div>  
+    </div>  
+        </div>  
+        </div>                                     
+                             
 <script src="/Scripts/main.js"></script>
-<script src="/Scripts/buyMenu.js"></script>
+<!-- <script src="/Scripts/buyMenu.js"></script> -->
+<script src="/Scripts/market.js"></script>
 </body>
 </html>
